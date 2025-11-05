@@ -1,0 +1,8 @@
+{
+  "$schema": "https://html-validate.org/schemas/config.json",
+  "extends": ["html-validate:recommended"],
+  "rules": {
+    "no-raw-characters": ["warn", { "relaxed": true }],
+    "doctype-style": ["warn", { "style": "lowercase" }]
+  }
+}
