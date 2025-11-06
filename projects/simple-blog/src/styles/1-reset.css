@@ -1,0 +1,85 @@
+/* 1. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+html {
+  box-sizing: border-box; /* 2. Use a more-intuitive box-sizing model */
+  font-synthesis: none;
+
+  /* 3. Prevent font size inflation (iOS) */
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  text-rendering: optimizelegibility; /* --> might cause weird behaviors on chrome with some font-weights */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;  /* 2.1 make box-sizing inheritable */
+}
+
+/* 4. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 1.8125rem; /* equal firefox h1 UA styles to chrome */
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2 {
+  line-height: 1.2;
+}
+
+h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+button, input,
+textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+
+  I'd need to test this thoroughly
+
+  #root {
+    isolation: isolate;
+  }
+*/

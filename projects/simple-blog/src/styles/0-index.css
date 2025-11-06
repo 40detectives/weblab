@@ -1,0 +1,7 @@
+@layer reset, base;
+
+/* CSS Reset */
+@import url("@css/1-reset.css") layer(reset);
+
+/* CSS normal */
+@import url("@css/2-base.css") layer(base);
