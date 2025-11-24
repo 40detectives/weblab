@@ -1,0 +1,89 @@
+/* -----Nav bar----- */
+.nav-wrapper {
+  position: sticky;
+  top: 0;
+  border-bottom: 3px solid #fff;
+  background: rgb(0 0 0 / 55%);
+  /* backdrop-filter: blur(10px); */
+}
+
+.blog-title {
+  --text-shadow-blur: 28px;
+
+  flex-basis: 100%; /* fix for the letter spacing shrinking the width of auto */
+  font-weight: 900;
+  font-size: calc(var(--base-font-size) * 1.75);
+  letter-spacing: -3px;
+}
+
+.nav-list {
+  display: flex;
+  gap: clamp(0.4rem, 4px + 4vw, 6rem);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+.nav-link {
+  --gradient-c1: #ff6f00;
+  --gradient-c2: #ff0;
+  --gradient-c3: #0f8;
+  --gradient-c4: #c800ff;
+  --gradient-anim-secs: 2.5s;
+  --gradient-angle: 315deg;
+  --text-shadow-blur: 20px;
+  --text-shadow-color: #00ff8880;
+
+  position: relative;
+  font-weight: 900;
+  font-size: calc(var(--base-font-size) * 1.1);
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  -webkit-text-fill-color: #fff;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background:
+      0% 0% / 200%
+      linear-gradient(
+        var(--gradient-angle),
+        var(--gradient-c1),
+        var(--gradient-c2),
+        var(--gradient-c3),
+        var(--gradient-c4)
+      );
+    transition: width 0.25s ease;
+    animation: gradient-rub var(--gradient-anim-secs) ease infinite;
+  }
+
+  &:hover, &:focus-visible {
+    text-shadow: 0 0 var(--text-shadow-blur) var(--text-shadow-color);
+    -webkit-text-fill-color: transparent;
+  }
+
+  &:hover::after, &:focus-visible::after {
+    width: 100%;
+  }
+}
+
+@media (width < 375px) {
+  /** nav bar change **/
+  .nav-list {
+    flex-flow: row wrap;
+    gap: 8px 18vw;
+    justify-content: center;
+  }
+
+  .blog-title {
+    font-size: calc(var(--base-font-size) * 2.6);
+    text-align: center;
+  }
+}
