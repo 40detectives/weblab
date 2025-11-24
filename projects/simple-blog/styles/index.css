@@ -1,9 +1,24 @@
-@layer reset, base;
+@layer reset, skeleton, typography, base, components;
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Oswald:wght@200..700&display=swap");
 
-/* CSS Reset */
-@import url("@css/0-reset.css") layer(reset);
+/* CSS reset */
+@import url("@css/reset.css") layer(reset);
 
-/* CSS normal */
-@import url("@css/1-base.css") layer(base);
+/* CSS skeleton (content padding, general margins, etc ) */
+@import url("@css/skeleton.css") layer(skeleton);
+
+/* CSS for typography */
+@import url("@css/typography.css") layer(typography);
+
+/* CSS for normal stuff */
+@import url("@css/base.css") layer(base);
+
+/* CSS Color progression styles */
+@import url("@css/color-progression.css") layer(base);
+
+/* CSS for navbar */
+@import url("@css/navbar.css") layer(components);
+
+/* CSS Component oriented styles */
+@import url("@css/posts.css") layer(components);

@@ -1,0 +1,87 @@
+:root {
+  --base-font-size: 1rem;
+}
+
+body {
+  font-size: var(--base-font-size);
+  font-family: Inter, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, nav, dl {
+  font-family: Oswald, system-ui;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: clamp(2rem, var(--base-font-size) + 13vw, 12rem);
+  letter-spacing: clamp(-20px, -1px - 1.25vw, -3px);
+}
+
+.tagline {
+  font-weight: 900;
+  font-size: clamp(0.4rem, var(--base-font-size) * 0.2 + 2.5vw, 2.5rem);
+  letter-spacing: clamp(0.25rem, var(--base-font-size) * 0.1 + 1.5vw, 2rem);
+  text-transform: uppercase;
+}
+
+.hero-header {
+  text-align: center;
+}
+
+/** --- Drop caps --- **/
+.article-content > p:first-of-type::first-letter {
+  color: slategray;
+  font-weight: bold;
+  font-family: monospace;
+}
+
+@supports (not (initial-letter: 2)) and (not (-webkit-initial-letter: 2)) {
+  .article-content > p:first-of-type::first-letter {
+    float: left;
+    margin-top: 0.3rem;
+    margin-right: 0.1ex;
+    margin-bottom: 0;
+    font-size: 300%;
+    /* padding: 0.35cap; */ /* for backgrounds */
+  }
+}
+
+@supports (initial-letter: 2) or (-webkit-initial-letter: 2) {
+  .article-content > p:first-of-type::first-letter {
+    margin-right: 0.5cap;
+    margin-left: 0.5cap;
+    -webkit-initial-letter: 2;
+    initial-letter: 2;
+    /* padding: 0 .9cap 0 1.35cap; */ /* for backgrounds */
+  }
+}
+
+/** --- Media Queries --- **/
+
+@media (width < 320px) {
+  :root {
+    --base-font-size: 0.85rem;
+  }
+}
+
+@media (width >= 1200px) {
+  :root {
+    --base-font-size: 1.125rem; /* to be tested */
+  }
+
+  h1 {
+    font-size: 11rem;
+    letter-spacing: -1.1rem;
+  }
+
+  .blog-title {
+    font-size: calc(var(--base-font-size) * 2);
+  }
+}
+
+@media (width >= 2400px) {
+  h1 {
+    font-size: 16rem;
+    letter-spacing: -1.6rem;
+  }
+}
