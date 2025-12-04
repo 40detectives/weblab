@@ -1,0 +1,26 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;  /* 2.1 make box-sizing inheritable */
+}
+
+body {
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2 {
+  line-height: 1.2;
+}
+
+h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+ol {
+  padding: 0;
+  list-style-position: inside;
+}
