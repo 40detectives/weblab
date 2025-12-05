@@ -6,11 +6,10 @@ export default defineConfig({
   build: {
     outDir: "dist",
     rolldownOptions: {
-      /* input: {
+      input: {
+        ...getHtmlEntryFiles("challenges"),
         main: path.resolve(import.meta.dirname, "index.html"),
-        "01": path.resolve(import.meta.dirname, "01/*"),
-      }, */
-      input: getHtmlEntryFiles("challenges"),
+      },
     },
   },
 });
