@@ -1,3 +1,30 @@
+:root {
+  /* color names */
+  --nighsky: #051016;
+  --deep-blue: #233243;
+  --steel-gray: #506477;
+  --laser-green: #5dff38;
+  --mint-glow: #b3ffad;
+  --sandy-brown: #fc9e4f;
+  --light-caramel: #fcb97d;
+  --mint-cream: #d7eadf;
+  --porcelain: #fdfffc;
+  --pearl-aqua: #b8d8d8;
+
+  /* purpose names */
+  --main-bg: var(--nighsky);
+  --accent1: var(--laser-green);
+  --accent1-alt: var(--mint-glow);
+  --accent2: var(--sandy-brown);
+  --accent2-alt: var(--light-caramel);
+  --overlay1: var(--deep-blue);
+  --overlay2: var(--steel-gray);
+  --text-primary: var(--porcelain);
+  --text-secondary: var(--mint-cream);
+  --subtle-detail: var(--pearl-aqua);
+  --border-radius: 10px;
+}
+
 /* ************ */
 /* RESET STYLES */
 /* ************ */
@@ -11,6 +38,8 @@ html {
 }
 
 body {
+  margin: 1rem;
+  background-color: var(--nighsky);
   font-family: Ubuntu, sans-serif;
   line-height: 1.5;
 }
@@ -28,6 +57,11 @@ button, input, label {
 ol {
   padding: 0;
   list-style-position: inside;
+}
+
+dd {
+  margin-block: 0.5rem;
+  margin-inline-start: 0;
 }
 
 /* ************** */
@@ -52,10 +86,30 @@ h2 {
   display: inline-block;
   width: 4rem;
   padding: 0.2rem 0.55rem;
-  border: 2px solid var(--light-detail);
+  border: 2px solid var(--subtle-detail);
   border-radius: var(--border-radius);
-  background-color: var(--detail);
+  background-color: var(--overlay2);
   color: var(--accent1-alt);
+  text-align: center;
+
+  &:hover {
+    border: 2px solid var(--accent1);
+    background-color: var(--main-bg);
+    color: var(--accent1);
+  }
+}
+
+dl {
+  padding: 20px;
+  border-radius: var(--border-radius);
+  background-color: var(--overlay1);
+  color: var(--text-primary);
+}
+
+.challenge-term {
+  color: var(--text-secondary);
+}
+
 .challenge-cue {
   color: var(--accent1);
   font-family: "Permanent Marker", "Brush Script MT", cursive;
