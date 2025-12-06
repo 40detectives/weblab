@@ -148,6 +148,12 @@ code {
   &:nth-child(2n) {
     background-color: var(--c-overlay2);
   }
+
+  &:hover, &:focus-within {
+    border: 3px solid var(--c-accent2-alt);
+    transition: all 0.28s;
+    transform: scale(1.07);
+  }
 }
 
 .challenge-term {
