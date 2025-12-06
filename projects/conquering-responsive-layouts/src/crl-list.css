@@ -64,12 +64,11 @@ button, input, label {
 }
 
 ol {
-  padding: 0;
+  padding-inline: 1.125em;
   list-style-position: inside;
 }
 
 dd {
-  margin-block: 0.5em;
   margin-inline-start: 0;
 }
 
@@ -83,17 +82,26 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--ff-cursive);
 }
 
-h1, h2, a {
+h1 {
   color: var(--c-accent1);
+  font-size: 3rem;
+  text-align: center;
+  margin-block-end: 0.25rem;
 }
 
-h3 {
+h2 {
   color: var(--c-accent2);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+h1 + h2 {
+  margin-block-start: 0.25rem;
 }
 
 dl {
   display: grid;
-  gap: 1em;
+  gap: 1.8em;
 }
 
 code {
@@ -124,11 +132,13 @@ code {
 .content-wrapper {
   max-width: 60em;
   margin: 0 auto;
-  padding: 3em;
+  padding-inline: 4.5em;
 }
 
 .definition-group {
-  padding: 2em;
+  display: grid;
+  gap: 1em;
+  padding: 1.125em 1.75em;
   border-radius: var(--border-radius);
 
   &:nth-child(n) {
@@ -142,6 +152,7 @@ code {
 
 .challenge-term {
   color: var(--c-accent1);
+  font-size: 1.5rem;
   font-family: var(--ff-cursive);
 }
 
@@ -151,24 +162,47 @@ code {
   text-transform: uppercase;
 }
 
+.goal-item {
+  margin-block: 0.375em;
+
+  &::marker {
+    color: var(--c-accent1);
+    font-weight: bold;
+  }
+}
+
 /* ************* */
 /* MEDIA QUERIES */
 /* ************* */
 
 @media (width >= 900px) {
   html {
-    font-size: 110%;
+    font-size: 108%;
   }
 }
 
-@media (width <= 650px) {
+@media (width <= 670px) {
   html {
-    font-size: 93%;
+    font-size: 96%;
+  }
+
+  .content-wrapper {
+    padding-inline: 3.5em;
   }
 }
 
-@media (width <= 475px) {
+@media (width <= 500px) {
   html {
-    font-size: 85%;
+    font-size: 92%;
+  }
+
+  .content-wrapper {
+    padding-inline: 2em;
+  }
+}
+
+@media (width <= 375px) {
+  html {
+    font-size: 86%;
   }
 }
