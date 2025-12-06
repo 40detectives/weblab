@@ -1,3 +1,18 @@
 {
-  "plugins": ["@awmottaz/prettier-plugin-void-html"]
+  "plugins": ["@awmottaz/prettier-plugin-void-html"],
+  "overrides": [
+    {
+      "files": ["*.html"],
+      "options": {
+        "htmlWhitespaceSensitivity": "strict",
+        "printWidth": 100
+      }
+    },
+    {
+      "files": ["*.json, *.jsonc"],
+      "options": {
+        "printWidth": 110
+      }
+    }
+  ]
 }

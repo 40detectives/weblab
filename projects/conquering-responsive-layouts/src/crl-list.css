@@ -1,0 +1,214 @@
+:root {
+  /* color names */
+  --nighsky: #051016;
+  --deep-blue: #233243;
+  --charcoal-blue: #33434d;
+  --steel-gray: #506477;
+  --laser-green: #5dff38;
+  --mint-glow: #b3ffad;
+  --sandy-brown: #fc9e4f;
+  --light-caramel: #fcb97d;
+  --mint-cream: #d7eadf;
+  --porcelain: #fdfffc;
+  --pearl-aqua: #b8d8d8;
+
+  /* check if usable */
+  --maybe-c1: #5682bf;
+  --dark-green: #334c4d;
+
+  /* purpose names */
+  --c-main-bg: var(--nighsky);
+  --c-accent1: var(--laser-green);
+  --c-accent1-alt: var(--mint-glow);
+  --c-accent2: var(--sandy-brown);
+  --c-accent2-alt: var(--light-caramel);
+  --c-overlay1: var(--deep-blue);
+  --c-overlay2: var(--charcoal-blue);
+  --c-txt-primary: var(--porcelain);
+  --c-txt-secondary: var(--mint-cream);
+  --c-finesse1: var(--steel-gray);
+  --c-finesse2: var(--pearl-aqua);
+  --border-radius: 0.75em;
+  --ff-cursive: "Permanent Marker", "Brush Script MT", cursive;
+  --ff-sans: "Ubuntu", sans-serif;
+}
+
+/* ************ */
+/* RESET STYLES */
+/* ************ */
+html {
+  box-sizing: border-box;
+  font-synthesis: none;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;  /* 2.1 make box-sizing inheritable */
+}
+
+body {
+  margin: 0;
+  background-color: var(--c-main-bg);
+  color: var(--c-txt-primary);
+  font-family: var(--ff-sans);
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2 {
+  line-height: 1.2;
+}
+
+h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+ol {
+  padding-inline: 1.125em;
+  list-style-position: inside;
+}
+
+dd {
+  margin-inline-start: 0;
+}
+
+/* ************** */
+/* REGULAR STYLES */
+/* ************** */
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  font-style: normal;
+  font-family: var(--ff-cursive);
+}
+
+h1 {
+  color: var(--c-accent1);
+  font-size: 3rem;
+  text-align: center;
+  margin-block-end: 0.25rem;
+}
+
+h2 {
+  color: var(--c-accent2);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+h1 + h2 {
+  margin-block-start: 0.25rem;
+}
+
+dl {
+  display: grid;
+  gap: 1.8em;
+}
+
+code {
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 0.1em 0.45em;
+  border-radius: calc(var(--border-radius) * 0.85);
+  background-color: var(--c-finesse1);
+}
+
+.challenge-links > a {
+  display: inline-block;
+  width: 4em;
+  padding: 0.2em 0.55em;
+  border: 2px solid var(--c-finesse2);
+  border-radius: var(--border-radius);
+  background-color: var(--c-finesse1);
+  color: var(--c-accent1-alt);
+  text-align: center;
+
+  &:hover {
+    border: 2px solid var(--c-accent1);
+    background-color: var(--c-main-bg);
+    color: var(--c-accent1);
+  }
+}
+
+.content-wrapper {
+  max-width: 60em;
+  margin: 0 auto;
+  padding-inline: 4.5em;
+}
+
+.definition-group {
+  display: grid;
+  gap: 1em;
+  padding: 1.125em 1.75em;
+  border-radius: var(--border-radius);
+
+  &:nth-child(n) {
+    background-color: var(--c-overlay1);
+  }
+
+  &:nth-child(2n) {
+    background-color: var(--c-overlay2);
+  }
+
+  &:hover, &:focus-within {
+    border: 3px solid var(--c-accent2-alt);
+    transition: all 0.28s;
+    transform: scale(1.07);
+  }
+}
+
+.challenge-term {
+  color: var(--c-accent1);
+  font-size: 1.5rem;
+  font-family: var(--ff-cursive);
+}
+
+.challenge-cue {
+  color: var(--c-accent2);
+  font-family: var(--ff-cursive);
+  text-transform: uppercase;
+}
+
+.goal-item {
+  margin-block: 0.375em;
+
+  &::marker {
+    color: var(--c-accent1);
+    font-weight: bold;
+  }
+}
+
+/* ************* */
+/* MEDIA QUERIES */
+/* ************* */
+
+@media (width >= 900px) {
+  html {
+    font-size: 108%;
+  }
+}
+
+@media (width <= 670px) {
+  html {
+    font-size: 96%;
+  }
+
+  .content-wrapper {
+    padding-inline: 3.5em;
+  }
+}
+
+@media (width <= 500px) {
+  html {
+    font-size: 92%;
+  }
+
+  .content-wrapper {
+    padding-inline: 2em;
+  }
+}
+
+@media (width <= 375px) {
+  html {
+    font-size: 86%;
+  }
+}

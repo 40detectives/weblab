@@ -30,6 +30,8 @@
     "@awmottaz/prettier-plugin-void-html": "^1.9.0",
     "@eslint/js": "^9.39.1",
     "@eslint/json": "^0.14.0",
+    "@stylistic/stylelint-config": "^3.0.1",
+    "@stylistic/stylelint-plugin": "^4.0.0",
     "backstopjs": "^6.3.25",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
