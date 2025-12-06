@@ -2,6 +2,7 @@
   /* color names */
   --nighsky: #051016;
   --deep-blue: #233243;
+  --deep-night: #1f4664;
   --steel-gray: #506477;
   --laser-green: #5dff38;
   --mint-glow: #b3ffad;
@@ -11,18 +12,24 @@
   --porcelain: #fdfffc;
   --pearl-aqua: #b8d8d8;
 
+  /* check if usable */
+  --maybe-c1: #5682bf;
+
   /* purpose names */
-  --main-bg: var(--nighsky);
-  --accent1: var(--laser-green);
-  --accent1-alt: var(--mint-glow);
-  --accent2: var(--sandy-brown);
-  --accent2-alt: var(--light-caramel);
-  --overlay1: var(--deep-blue);
-  --overlay2: var(--steel-gray);
-  --text-primary: var(--porcelain);
-  --text-secondary: var(--mint-cream);
-  --subtle-detail: var(--pearl-aqua);
-  --border-radius: 10px;
+  --c-main-bg: var(--nighsky);
+  --c-accent1: var(--laser-green);
+  --c-accent1-alt: var(--mint-glow);
+  --c-accent2: var(--sandy-brown);
+  --c-accent2-alt: var(--light-caramel);
+  --c-overlay1: var(--deep-blue);
+  --c-overlay2: var(--deep-night);
+  --c-text-primary: var(--porcelain);
+  --c-text-secondary: var(--mint-cream);
+  --c-finesse1: var(--steel-gray);
+  --c-finesse2: var(--pearl-aqua);
+  --border-radius: 0.75em;
+  --ff-cursive: "Permanent Marker", "Brush Script MT", cursive;
+  --ff-sans: "Ubuntu", sans-serif;
 }
 
 /* ************ */
@@ -38,9 +45,9 @@ html {
 }
 
 body {
-  margin: 1rem;
+  margin: 1em;
   background-color: var(--nighsky);
-  font-family: Ubuntu, sans-serif;
+  font-family: var(--ff-sans);
   line-height: 1.5;
 }
 
@@ -60,7 +67,7 @@ ol {
 }
 
 dd {
-  margin-block: 0.5rem;
+  margin-block: 0.5em;
   margin-inline-start: 0;
 }
 
@@ -71,47 +78,71 @@ dd {
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-style: normal;
-  font-family: "Permanent Marker", "Brush Script MT", cursive;
+  font-family: var(--ff-cursive);
 }
 
 h1, a {
-  color: var(--accent1);
+  color: var(--c-accent1);
 }
 
 h2 {
-  color: var(--accent2);
+  color: var(--c-accent2);
+}
+
+code {
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 0.1em 0.45em;
+  border-radius: calc(var(--border-radius) * 0.85);
+  background-color: var(--c-finesse1);
 }
 
 .challenge-links > a {
   display: inline-block;
-  width: 4rem;
-  padding: 0.2rem 0.55rem;
-  border: 2px solid var(--subtle-detail);
+  width: 4em;
+  padding: 0.2em 0.55em;
+  border: 2px solid var(--c-finesse2);
   border-radius: var(--border-radius);
-  background-color: var(--overlay2);
-  color: var(--accent1-alt);
+  background-color: var(--c-finesse1);
+  color: var(--c-accent1-alt);
   text-align: center;
 
   &:hover {
-    border: 2px solid var(--accent1);
-    background-color: var(--main-bg);
-    color: var(--accent1);
+    border: 2px solid var(--c-accent1);
+    background-color: var(--c-main-bg);
+    color: var(--c-accent1);
   }
 }
 
 dl {
-  padding: 20px;
+  display: grid;
+  gap: 1em;
+  padding: 1.5em;
   border-radius: var(--border-radius);
-  background-color: var(--overlay1);
-  color: var(--text-primary);
+  /* background-color: var(--c-finesse2); */
+  color: var(--c-text-primary);
+}
+
+.definition-group {
+  padding: 2em;
+  border-radius: var(--border-radius);
+
+  &:nth-child(n) {
+    background-color: var(--c-overlay1);
+  }
+
+  &:nth-child(2n) {
+    background-color: var(--c-overlay2);
+  }
 }
 
 .challenge-term {
-  color: var(--text-secondary);
+  color: var(--c-accent1);
+  font-family: var(--ff-cursive);
 }
 
 .challenge-cue {
-  color: var(--accent1);
-  font-family: "Permanent Marker", "Brush Script MT", cursive;
+  color: var(--c-accent2);
+  font-family: var(--ff-cursive);
   text-transform: uppercase;
 }
