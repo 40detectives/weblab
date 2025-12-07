@@ -1,0 +1,44 @@
+header {
+  margin-bottom: 3rem;
+}
+
+.container {
+  padding: 0 2em;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.content-sidebar {
+  display: flex;
+  align-items: flex-start;
+  gap: 4rem;
+  flex-wrap: wrap;
+}
+
+main {
+  flex-grow: 9999;
+  flex-basis: 50%;
+}
+
+aside {
+  border: 4px solid black;
+  padding: 1em;
+}
+
+.adaptable-sidebar {
+  flex-basis: 20rem;
+  flex-grow: 1;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.adaptable-sidebar > * {
+  flex-basis: 100%;
+}
+
+.adaptable-sidebar > .card {
+  flex-basis: 1%;
+  flex-grow: 1;
+}

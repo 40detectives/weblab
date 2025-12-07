@@ -1,0 +1,50 @@
+/* ///////////////
+   YOUR TASK
+   ///////////////
+ 
+  1.  Without changing the flex-direction
+      the header and footer must have an
+      actual width of 100%
+  
+  2.  WIOUTOUT USING A MEDIA QUERY
+      The main and aside should stack on
+      smaller screens, but go next to one
+      another on large screens
+
+  3.  The main should be larger, and grow
+      faster than the aside.
+
+      main ideal width: 56rem
+      aside ideal width: 25rem
+
+*/
+
+.flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: center; */
+}
+
+header,
+footer {
+  width: 100%;
+  background: black;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  padding: 3rem;
+  flex-basis: 56rem;
+  flex-grow: 2;
+}
+
+aside {
+  font-size: 1.125rem;
+  padding: 3rem;
+  flex-basis: 25rem;
+  flex-grow: 1;
+}

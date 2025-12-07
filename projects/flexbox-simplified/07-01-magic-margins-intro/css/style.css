@@ -1,0 +1,47 @@
+header {
+  display: flex;
+  flex-direction: column;
+
+  background: black;
+  color: white;
+  padding: 2rem;
+  height: 100vh;
+  width: 15rem;
+  position: fixed;
+}
+
+main {
+  padding: 3rem;
+  flex-basis: 56rem;
+  flex-grow: 2;
+  padding-left: 20rem;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 85vh;
+}
+
+nav a {
+  color: inherit;
+}
+
+nav a:hover,
+nav a:focus {
+  color: yellowgreen;
+}
+
+.login-link {
+  margin-top: auto;
+  background: yellowgreen;
+  color: black;
+}
+
+.signup-link {
+  margin-bottom: auto;
+}
