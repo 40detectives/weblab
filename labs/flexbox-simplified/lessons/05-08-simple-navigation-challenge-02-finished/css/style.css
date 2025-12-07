@@ -1,0 +1,46 @@
+/* ///////////////
+   YOUR TASK
+   ///////////////
+
+  1.  Add only one line of CSS to
+      have the logo on top of the 
+      navigation.
+      
+      Everything must still be 
+      centered horizontally within
+      the header
+*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 2rem;
+}
+
+.logo {
+  width: 10rem;
+  margin: 0 0 2em 0;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: inherit;
+}
+
+nav a:hover,
+nav a:focus {
+  color: yellowgreen;
+}
+
+nav li {
+  margin-left: 1em;
+}

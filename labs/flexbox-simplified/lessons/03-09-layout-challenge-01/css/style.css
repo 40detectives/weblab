@@ -1,0 +1,16 @@
+/* ///////////////
+   YOUR TASK
+   ///////////////
+
+   1. At a viewport width of 32.5em
+      and bigger, .subscribe and 
+      .recent-episodes should go next to 
+      one another
+
+  2.  They should both be equal in width
+      until .subscribe reaches a width
+      of 25rem, at which point it no longer
+      grows anymore, and .recent-episodes
+      continues to grow to take up the 
+      rest of the available space
+*/

@@ -1,0 +1,38 @@
+/* ///////////////
+   YOUR TASK
+   ///////////////
+ 
+  1.  Have the logo on the left, and the
+      navigation on the right side
+  
+  2.  Use flexbox to have the navigation
+      items to go next to one another
+
+  3   Vertically center the nav items
+
+*/
+
+header {
+  background: black;
+  color: white;
+  padding: 2rem;
+}
+
+.logo {
+  width: 20rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  color: inherit;
+}
+
+nav a:hover,
+nav a:focus {
+  color: yellowgreen;
+}

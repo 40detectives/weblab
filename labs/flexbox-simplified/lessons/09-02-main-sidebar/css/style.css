@@ -1,0 +1,30 @@
+header {
+  background: black;
+  color: white;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flex-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+}
+
+header {
+  flex-basis: 15rem;
+  flex-grow: 1;
+}
+
+main {
+  flex-basis: 60%;
+  padding: 2em;
+  flex-grow: 9999;
+}
+
+main > * {
+  max-width: 60rem;
+}

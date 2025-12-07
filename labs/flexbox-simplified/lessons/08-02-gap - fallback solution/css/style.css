@@ -1,0 +1,35 @@
+section {
+  padding: 5em 0;
+}
+
+.container {
+  padding: 0 2em;
+  max-width: 70rem;
+}
+
+.flex-grid {
+  --gap: 1em;
+  display: flex;
+  flex-flow: row wrap;
+  margin: calc(var(--gap) / -2);
+}
+
+.flex-grid > * {
+  margin: calc(var(--gap) / 2);
+}
+
+.card {
+  width: 300px;
+  flex-grow: 1;
+  border: 3px solid black;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 1em;
+}
