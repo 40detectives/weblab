@@ -1,0 +1,33 @@
+/** -- color sequence -- **/
+:root {
+  --seq-c1: #0df;
+  --seq-c2: #c800ff;
+  --seq-c3: #ff0080;
+  --seq-c4: #0f8;
+  --seq-c5: #ff0;
+  --seq-c6: #f60;
+}
+
+article:nth-of-type(6n+1) {
+  --accent-color: var(--seq-c1);
+}
+
+article:nth-of-type(6n+2) {
+  --accent-color: var(--seq-c2);
+}
+
+article:nth-of-type(6n+3) {
+  --accent-color: var(--seq-c3);
+}
+
+article:nth-of-type(6n+4) {
+  --accent-color: var(--seq-c4);
+}
+
+article:nth-of-type(6n+5) {
+  --accent-color: var(--seq-c5);
+}
+
+article:nth-of-type(6n) {
+  --accent-color: var(--seq-c6);
+}

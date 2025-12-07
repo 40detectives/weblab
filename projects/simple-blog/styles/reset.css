@@ -13,7 +13,7 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  text-rendering: optimizelegibility; /* --> might cause weird behaviors on chrome with some font-weights */
+  text-rendering: optimizeLegibility; /* --> might cause weird behaviors on chrome with some font-weights */
 }
 
 *, *::before, *::after {
