@@ -1,0 +1,21 @@
+/*  /////////////////
+    Your task 
+    /////////////////
+
+    1. Get the 3 `.column` classes next
+      to one another.
+
+    2. All 3 must be equal in width
+
+
+    /// Note
+    It'll be a lot easier if you add
+    a class to the parent <div> in
+    the HTML :)
+
+    ///////////////// */
+
+.column {
+  padding: 2rem;
+  border: 2px solid black;
+}
