@@ -1,0 +1,34 @@
+/* ///////////////
+   YOUR TASK
+   ///////////////
+  
+  1.  Name and input on the left,
+      email and input on the right
+
+  2   Submit button
+  2.1 text should be next to the icon
+  2.2 button should be aligned to the right
+      side of the form
+
+*/
+
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0 0 0 0.5em;
+  color: black;
+  background: white;
+  border: 2px solid black;
+}
+
+form {
+  border: 3px solid black;
+  padding: 2rem;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 2px solid black;
+  padding: 0.5em 1em;
+}
