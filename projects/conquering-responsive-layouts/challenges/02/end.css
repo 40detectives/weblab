@@ -23,18 +23,15 @@ body {
   font-family: sans-serif;
 }
 
-.wrapper, .container {
+.container {
+  width: 80%;
   max-width: 750px;
   margin: 0 auto;
-  padding-inline: 2em;
 }
 
-.container-bg {
-  background: #23424a;
-}
-
-.container {
+.intro {
   padding-block: 50px;
+  background: #23424a;
   color: white;
 }
 
