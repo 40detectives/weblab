@@ -3,6 +3,7 @@ import path from "node:path";
 import fs from "node:fs";
 
 export default defineConfig({
+  base: "/weblab/projects/conquering-responsive-layouts/dist/",
   build: {
     outDir: "dist",
     rolldownOptions: {
