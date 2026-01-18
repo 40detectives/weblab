@@ -1,7 +1,7 @@
 {
   "name": "@weblab/simple-blog",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "HTML & CSS only example of a blog",
   "license": "MIT",
   "type": "module",
@@ -11,6 +11,6 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "npm:rolldown-vite@^7.2.0"
+    "vite": "npm:rolldown-vite@^7.3.1"
   }
 }

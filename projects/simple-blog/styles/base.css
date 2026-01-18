@@ -1,0 +1,177 @@
+@property --gradient-c1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #c800ff;
+}
+
+@property --gradient-c2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #0f8;
+}
+
+@property --gradient-c3 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ff0;
+}
+
+@property --gradient-c4 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ff6f00;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: 45deg;
+}
+
+@property --gradient-anim-secs {
+  syntax: "<time>";
+  inherits: true;
+  initial-value: 6s;
+}
+
+@property --text-shadow-blur {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 80px;
+}
+
+@property --text-shadow-color {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #ffff0080; /* #ff008080; --> before */
+}
+
+@keyframes gradient-rub {
+  0%, 100% { background-position: 0% 25%; }
+  50% { background-position: 100% 75%; }
+}
+
+@keyframes radiant {
+  0%, 100% {
+    border-radius: 100% 40%;
+    filter: blur(200px) opacity(0.1);
+  }
+
+  50% {
+    border-radius: 50%;
+    filter: blur(80px) opacity(1);
+  }
+}
+
+:root {
+  --graphite: #09031f;
+  --oyster: #e3e2e2;
+}
+
+body {
+  background-color: var(--graphite);
+  color: var(--oyster);
+}
+
+.bg-shapes {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  display: none;
+  overflow: hidden;
+  width: 100vw;
+  height: 100lvh;
+}
+
+.shape {
+  position: absolute;
+  animation: radiant 5s ease-in-out infinite alternate;
+  animation-fill-mode: backwards;
+}
+
+.shape1 {
+  top: -100px;
+  left: -100px;
+  width: 500px;
+  height: 500px;
+  background: #ff0080;
+  /* animation-delay: 0s; */
+}
+
+.shape2 {
+  right: -100px;
+  bottom: -100px;
+  width: 450px;
+  height: 450px;
+  background: #0f8;
+  animation-delay: 2s;
+}
+
+.shape3 {
+  top: 0%;
+  right: 0%;
+  width: 300px;
+  height: 300px;
+  background: #ff0;
+  animation-delay: 4s;
+}
+
+.text-moving-gradient {
+  background:
+    0% 0% / 200%
+    text
+    linear-gradient(
+      var(--gradient-angle),
+      var(--gradient-c1),
+      var(--gradient-c2),
+      var(--gradient-c3),
+      var(--gradient-c4)
+    );
+  /* animation: gradient-rub var(--gradient-anim-secs) ease infinite; */
+  -webkit-text-fill-color: transparent;
+  /* color: transparent; */
+}
+
+.text-glow {
+  text-shadow: 0 0 var(--text-shadow-blur) var(--text-shadow-color);
+}
+
+.tagline {
+  color: #fff;
+}
+
+.article-content {
+  display: flex; /* !! --> delete? */
+  display: flow-root;
+}
+
+/* -----Img aligment (nor working on images when screen width is to low)----- */
+
+.article-content > .img-aligner {
+  border: 2px solid red; /* for debugging */
+
+  /* TODO ^^^ */
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.visually-hidden {
+  /* visually hidden */
+  position: absolute;
+  top: -500px;
+  left: 0;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+}

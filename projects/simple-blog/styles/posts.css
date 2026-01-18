@@ -1,0 +1,128 @@
+.post-list {
+  display: grid;
+  row-gap: 4rem;
+  margin-block-end: 3rem;
+}
+
+.post-card {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto;
+  overflow: hidden;
+  border: 5px solid #fff;
+  background: rgb(0 0 0 / 80%);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.post-img {
+  align-content: center;
+  justify-items: center;
+  background-color: var(--accent-color);
+
+  img {
+    object-fit: cover;
+    min-height: 100%;
+  }
+}
+
+.post-content {
+  padding: 2rem;
+}
+
+.post-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 8px;
+  height: 100%;
+  background: var(--accent-color);
+  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+.post-card:hover::before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+.post-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 8px;
+  background: var(--accent-color);
+  transition: width 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.post-card:hover::after {
+  width: 100%;
+}
+
+.post-card:hover {
+  border-color: var(--graphite);
+  transform: scale(1.02) rotate(1deg);
+}
+
+.post-card:nth-child(even):hover {
+  transform: scale(1.02) rotate(-1deg);
+}
+
+.author-date-line {
+  border-left: 4px solid;
+  border-left-color: var(--accent-color);
+}
+
+.emoji-img {
+  display: block;
+  font-size: clamp(7rem, 4rem + 8vw, 11rem);
+  filter:
+    brightness(0) invert(1)
+    drop-shadow(0 4px 8px rgb(0 0 0 / 60%))
+    drop-shadow(0 2px 4px rgb(0 0 0 / 80%));
+}
+
+@media (width > 720px) {
+  .post-card:nth-of-type(odd) {
+    grid-template-columns: 1fr 3fr;
+  }
+
+  .post-card:nth-of-type(even) {
+    grid-template-columns: 3fr 1fr;
+
+    .post-content {
+      order: 0;
+    }
+
+    .post-img {
+      order: 1;
+    }
+  }
+}
+
+@media (width > 900px) {
+  .post-list {
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+
+  .post-card:nth-of-type(odd) {
+    grid-template-columns: 1fr 3fr;
+    grid-column: 1/3;
+  }
+
+  .post-card:nth-of-type(even) {
+    grid-template-columns: 3fr 1fr;
+    grid-column: 2/-1;
+  }
+}
+
+@media (width < 1150px) {
+  .post-img img {
+    object-fit: scale-down;
+    min-height: 100%;
+  }
+}

@@ -1,0 +1,61 @@
+:root {
+  --base-content-max-width: 1200px;
+  --content-max-width: var(--base-content-max-width);
+  --base-content-padding: 40px; /* 4ch? */
+  --content-padding: var(--base-content-padding);
+}
+
+nav {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: 10px var(--content-padding);
+}
+
+.hero-header {
+  display: grid;
+  gap: calc(1rem + 1svh);
+  margin-block: 3rem;
+}
+
+.content {
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding-inline: var(--content-padding);
+}
+
+/** Media Queries **/
+@media (width < 320px) {
+  :root {
+    --content-padding: calc(var(--base-content-padding) * 0.4);
+  }
+}
+
+@media (width >= 320px) and (width < 438px) {
+  :root {
+    --content-padding: calc(var(--base-content-padding) * 0.65);
+  }
+}
+
+@media (width >= 438px) and (width < 507px) {
+  :root {
+    --content-padding: calc(var(--base-content-padding) * 0.85);
+  }
+}
+
+@media (width >= 507px) and (width < 694px) {
+  :root {
+    --content-padding: calc(var(--base-content-padding) * 1.1);
+  }
+}
+
+@media (width >= 694px) {
+  :root {
+    --content-padding: calc(var(--base-content-padding) * 1.3);
+  }
+}
+
+@media (width >= 2400px) {
+  :root {
+    --content-max-width: calc(var(--base-content-max-width) * 1.4);
+  }
+}
