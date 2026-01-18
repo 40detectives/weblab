@@ -1,7 +1,7 @@
 {
   "name": "@weblab/conquering-responsive-layouts",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Conquering Responsive Layouts (CRL): 21-day challenge course",
   "license": "MIT",
   "type": "module",
