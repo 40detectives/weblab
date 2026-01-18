@@ -11,6 +11,7 @@ export default defineConfig({
   base: "/weblab/projects/simple-blog/dist/",
   build: {
     outDir: "dist",
+    cssMinify: "esbuild",
     rolldownOptions: {
       input: {
         main: path.resolve(import.meta.dirname, "index.html"),
@@ -18,4 +19,5 @@ export default defineConfig({
       },
     },
   },
+  //css: { transformer: "lightningcss" },
 });
