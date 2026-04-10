@@ -1,0 +1,16 @@
+{
+  "name": "@weblab/css-fundamentals-v1",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Project for the course Modern CSS Fundamentals on Frontend Masters.",
+  "keywords": [
+    "css"
+  ],
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {}
+}
