@@ -1,2 +1,3 @@
 # weblab
-A monorepo to keep experimental web projects, mainly built with web standards.
+
+A monorepo for web project experiments, mainly built with web standards.

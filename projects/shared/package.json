@@ -1,0 +1,15 @@
+{
+  "name": "@weblab/shared",
+  "version": "0.1.0",
+  "description": "",
+  "license": "MIT",
+  "author": "",
+  "type": "module",
+  "exports": {
+    "./utils": "./utils.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {}
+}
