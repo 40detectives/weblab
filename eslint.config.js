@@ -18,6 +18,7 @@ export default defineConfig([
     plugins: { json },
     language: "json/json",
     extends: ["json/recommended"],
+    ignores: ["./package-lock.json"],
   },
   {
     name: "eslint json with comments recommended",
@@ -28,7 +29,7 @@ export default defineConfig([
   },
   {
     name: "eslint disable rules to match prettier",
-    files: ["**/*.{js,mjs,cjs,jsx,ts,tsx}"],
+    files: ["**/*.{js,mjs,cjs,jsx}"],
     extends: [eslintConfigPrettier],
   },
 ]);

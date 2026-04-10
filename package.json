@@ -2,7 +2,7 @@
   "name": "@weblab/root",
   "private": true,
   "version": "0.1.0",
-  "description": "A monorepo to keep experimental web projects, mainly built with web standards.",
+  "description": "A monorepo for web project experiments, mainly built with web standards.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -27,22 +27,21 @@
     "projects/*"
   ],
   "devDependencies": {
-    "@biomejs/biome": "^2.3.11",
-    "@eslint/js": "^9.39.1",
-    "@eslint/json": "^0.14.0",
-    "@stylistic/stylelint-config": "^3.0.1",
-    "@stylistic/stylelint-plugin": "^4.0.1",
-    "@vitejs/plugin-react": "^5.1.2",
+    "@biomejs/biome": "^2.4.11",
+    "@eslint/js": "^10.0.1",
+    "@eslint/json": "^1.2.0",
+    "@stylistic/stylelint-config": "^5.0.0",
+    "@stylistic/stylelint-plugin": "^5.1.0",
+    "@vitejs/plugin-react": "^6.0.1",
     "backstopjs": "^6.3.25",
-    "esbuild": "^0.27.2",
-    "eslint": "^9.39.2",
+    "eslint": "^10.2.0",
     "eslint-config-prettier": "^10.1.8",
-    "globals": "^16.5.0",
-    "prettier": "^3.8.0",
-    "stylelint": "^16.26.1",
-    "stylelint-config-hudochenkov": "^12.0.1",
-    "stylelint-config-standard": "^39.0.1",
-    "stylelint-order": "^7.0.1",
-    "vite": "npm:rolldown-vite@7.3.1"
+    "globals": "^17.4.0",
+    "prettier": "^3.8.2",
+    "stylelint": "^17.6.0",
+    "stylelint-config-hudochenkov": "^13.0.2",
+    "stylelint-config-standard": "^40.0.0",
+    "stylelint-order": "^8.1.1",
+    "vite": "^8.0.8"
   }
 }
