@@ -22,6 +22,10 @@ export default {
         ignoreComments: ["/^[a-z-]*:.*;$/"],
       },
     ],
+    "selector-pseudo-class-no-unknown": [
+      true,
+      { ignorePseudoClasses: ["global"] },
+    ],
     "property-no-vendor-prefix": [
       true,
       { ignoreProperties: ["text-size-adjust"] },
