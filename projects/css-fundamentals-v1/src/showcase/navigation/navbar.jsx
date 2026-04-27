@@ -35,7 +35,7 @@ export function Navbar() {
         className={clsx(
           homeLink,
           navLink,
-          ["#top", ""].includes(selectedLink) ? "selected" : "",
+          ["#", "#top", ""].includes(selectedLink) ? "selected" : "",
         )}
         onClick={handleLinkClick}
       >

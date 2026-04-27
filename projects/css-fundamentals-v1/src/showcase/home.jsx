@@ -4,7 +4,7 @@ export function Home() {
   return (
     <>
       <Navbar />
-      <h1 id="top">Modern CSS Fundamentals v1</h1>
+      <h1 id="">Modern CSS Fundamentals v1</h1>
       <h2>My Implementation</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
