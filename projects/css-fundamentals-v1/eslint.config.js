@@ -26,6 +26,9 @@ export default defineConfig([
     languageOptions: {
       globals: globals.browser,
     },
+    rules: {
+      "no-unused-vars": ["error", { varsIgnorePattern: "^[_]" }],
+    },
   },
   {
     name: "eslint json recommended",
@@ -77,7 +80,7 @@ export default defineConfig([
       ],
     },
     rules: {
-      "no-unused-vars": ["error", { varsIgnorePattern: "^[_]" }],
+      "react/prop-types": ["off"],
     },
   },
   {
