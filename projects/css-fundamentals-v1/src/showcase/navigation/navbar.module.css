@@ -58,9 +58,10 @@ li > .nav-link {
     top: 100%;
     min-height: 100dvh;
     background-color: var(--ld-bg-alt);
+    opacity: 0;
     transition-timing-function: ease-out;
     transition-duration: 0.5s;
-    transition-property: transform;
+    transition-property: transform, opacity;
     transition-behavior: allow-discrete;
     transform: translate(-100%, 0);
   }
@@ -72,6 +73,7 @@ li > .nav-link {
   }
 
   button:global(.selected) ~ .nav-container {
+    opacity: 1;
     transform: translate(0, 0);
   }
 }
