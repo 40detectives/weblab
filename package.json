@@ -24,24 +24,17 @@
   },
   "homepage": "https://github.com/40detectives/weblab#readme",
   "workspaces": [
-    "projects/*"
+    "labs/*"
   ],
   "devDependencies": {
-    "@biomejs/biome": "^2.4.11",
-    "@eslint/js": "^10.0.1",
-    "@eslint/json": "^1.2.0",
+    "@biomejs/biome": "^2.4.14",
     "@stylistic/stylelint-config": "^5.0.0",
     "@stylistic/stylelint-plugin": "^5.1.0",
-    "@vitejs/plugin-react": "^6.0.1",
     "backstopjs": "^6.3.25",
-    "eslint": "^10.2.0",
-    "eslint-config-prettier": "^10.1.8",
-    "globals": "^17.4.0",
-    "prettier": "^3.8.2",
-    "stylelint": "^17.6.0",
+    "prettier": "^3.8.3",
+    "stylelint": "^17.9.1",
     "stylelint-config-hudochenkov": "^13.0.2",
     "stylelint-config-standard": "^40.0.0",
-    "stylelint-order": "^8.1.1",
-    "vite": "^8.0.8"
+    "stylelint-order": "^8.1.1"
   }
 }
