@@ -1,5 +1,5 @@
 :root {
-  --base-content-max-width: 1200px;
+  --base-content-max-width: 1400px;
   --content-max-width: var(--base-content-max-width);
   --base-content-padding: 40px; /* 4ch? */
   --content-padding: var(--base-content-padding);

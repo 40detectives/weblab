@@ -10,66 +10,36 @@
   grid-template-columns: auto;
   overflow: hidden;
   border: 5px solid #fff;
-  background: rgb(0 0 0 / 80%);
-  cursor: pointer;
+  background-color: var(--accent-color);
   transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+  &:hover, &:focus-within {
+    border-color: var(--accent-color);
+    transform: scale(1.05) rotate(0.5deg);
+  }
+
+  &:nth-of-type(even) {
+    &:hover, &:focus-within {
+      transform: scale(1.05) rotate(-0.5deg);
+    }
+  }
 }
 
 .post-img {
   align-content: center;
   justify-items: center;
-  background-color: var(--accent-color);
 
   img {
     object-fit: cover;
-    min-height: 100%;
+    object-position: 50% 25%;
+    min-width: 100%;
+    height: 250px;
   }
 }
 
 .post-content {
   padding: 2rem;
-}
-
-.post-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 8px;
-  height: 100%;
-  background: var(--accent-color);
-  transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.15s;
-  transform: scaleY(0);
-  transform-origin: bottom;
-}
-
-.post-card:hover::before {
-  transform: scaleY(1);
-  transform-origin: top;
-}
-
-.post-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 8px;
-  background: var(--accent-color);
-  transition: width 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}
-
-.post-card:hover::after {
-  width: 100%;
-}
-
-.post-card:hover {
-  border-color: var(--graphite);
-  transform: scale(1.02) rotate(1deg);
-}
-
-.post-card:nth-child(even):hover {
-  transform: scale(1.02) rotate(-1deg);
+  background: rgb(0 0 0 / 90%);
 }
 
 .author-date-line {
@@ -86,7 +56,7 @@
     drop-shadow(0 2px 4px rgb(0 0 0 / 80%));
 }
 
-@media (width > 720px) {
+@media (width > 760px) {
   .post-card:nth-of-type(odd) {
     grid-template-columns: 1fr 3fr;
   }
@@ -120,9 +90,17 @@
   }
 }
 
-@media (width < 1150px) {
+@media (width > 760px) and (width < 1200px) {
   .post-img img {
     object-fit: scale-down;
+    object-position: 50% 50%;
+    min-height: 100%;
+  }
+}
+
+@media (width >= 1200px) {
+  .post-img img {
+    object-fit: cover;
     min-height: 100%;
   }
 }
