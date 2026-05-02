@@ -1,9 +1,9 @@
-import { Navbar } from "./navigation/navbar";
+import { NavHeader } from "./navigation/nav-header";
 
 export function Home() {
   return (
     <>
-      <Navbar />
+      <NavHeader />
       <h1 id="">Modern CSS Fundamentals v1</h1>
       <h2>My Implementation</h2>
       <p>

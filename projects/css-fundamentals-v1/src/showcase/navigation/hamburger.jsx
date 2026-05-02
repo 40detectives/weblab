@@ -1,8 +1,9 @@
-import { hamburger, hamburgerInner, animArrow } from "./hamburger.module.css";
 import { clsx } from "clsx";
-export function Hamburger() {
+import { animArrow, hamburger, hamburgerInner } from "./hamburger.module.css";
+export function Hamburger({ ariaControls, onToggle }) {
   function handleBurgerClick(event) {
     event.currentTarget.classList.toggle("selected");
+    onToggle();
   }
 
   return (
@@ -11,7 +12,7 @@ export function Hamburger() {
       className={clsx(hamburger, animArrow)}
       type="button"
       aria-label="Menu"
-      aria-controls="main-nav"
+      aria-controls={ariaControls}
     >
       <span className={hamburgerInner}></span>
     </button>
