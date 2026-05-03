@@ -118,3 +118,15 @@ a {
     color: var(--c-highlight-text-2);
   }
 }
+
+#root {
+  display: flex block;
+  flex-direction: column;
+  max-height: 100dvh;
+  border: 5px solid rgb(237 129 129);
+}
+
+.main-content {
+  overflow-y: auto;
+  border: 5px solid rgb(96 70 204);
+}

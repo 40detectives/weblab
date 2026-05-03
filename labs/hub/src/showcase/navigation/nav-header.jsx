@@ -11,8 +11,9 @@ import {
   navSearch,
   panelClose,
   panelOpen,
+  backdrop,
   stickyHeader,
-} from "./navbar.module.css";
+} from "./nav-header.module.css";
 import { ThemeSwitcher } from "./theme-switcher";
 
 const navLinks = [
@@ -56,37 +57,40 @@ function Navbar({ isSmallScreen }) {
   }
 
   return (
-    <nav className={navContainer} id="main-nav">
-      {isSmallScreen && (
-        <Hamburger ariaControls={"main-nav"} onToggle={toggleSideBar} />
-      )}
-      <a
-        href="#top"
-        className={clsx(
-          homeLink,
-          navLink,
-          ["#", "#top", ""].includes(selectedLink) ? "selected" : "",
+    <>
+      <nav className={navContainer} id="main-nav">
+        {isSmallScreen && (
+          <Hamburger ariaControls={"main-nav"} onToggle={toggleSideBar} />
         )}
-        onClick={handleLinkClick}
-      >
-        Modern CSS Fundamentals
-      </a>
-      <ul className={clsx(navList, isMobileOpen ? panelOpen : panelClose)}>
-        {navLinks.map((entry) => (
-          <li key={entry.link}>
-            <a
-              onClick={handleLinkClick}
-              href={entry.link}
-              className={clsx(
-                selectedLink === entry.link ? "selected" : "",
-                navLink,
-              )}
-            >
-              {entry.name}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </nav>
+        <a
+          href="#top"
+          className={clsx(
+            homeLink,
+            navLink,
+            ["#", "#top", ""].includes(selectedLink) ? "selected" : "",
+          )}
+          onClick={handleLinkClick}
+        >
+          Modern CSS Fundamentals
+        </a>
+        {isMobileOpen && <div className={backdrop}></div>}
+        <ul className={clsx(navList, isMobileOpen ? panelOpen : panelClose)}>
+          {navLinks.map((entry) => (
+            <li key={entry.link}>
+              <a
+                onClick={handleLinkClick}
+                href={entry.link}
+                className={clsx(
+                  selectedLink === entry.link ? "selected" : "",
+                  navLink,
+                )}
+              >
+                {entry.name}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </>
   );
 }
