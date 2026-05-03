@@ -15,6 +15,7 @@ import {
   stickyHeader,
 } from "./nav-header.module.css";
 import { ThemeSwitcher } from "./theme-switcher";
+import { createPortal } from "react-dom";
 
 const navLinks = [
   // { name: "Modern CSS Fundamentals", link: "#top", classes: homeLink },
@@ -24,7 +25,7 @@ const navLinks = [
   { name: "Course Site", link: "#course-site" },
 ];
 
-export function NavHeader() {
+export function NavHeader({ portalTarget }) {
   const mediaQuery = "(width <= 770px)";
   const isSmallScreen = useMediaQuery(mediaQuery);
 
@@ -33,6 +34,7 @@ export function NavHeader() {
       <Navbar
         key={isSmallScreen ? "mobile" : "desktop"}
         isSmallScreen={isSmallScreen}
+        portalTarget={portalTarget}
       />
       <input
         size={18}
@@ -46,9 +48,11 @@ export function NavHeader() {
   );
 }
 
-function Navbar({ isSmallScreen }) {
+function Navbar({ isSmallScreen, portalTarget }) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState("#top");
+
+  const panelStatus = clsx(navList, isMobileOpen ? panelOpen : panelClose);
 
   const toggleSideBar = () => setIsMobileOpen((prev) => !prev);
 
@@ -73,24 +77,45 @@ function Navbar({ isSmallScreen }) {
         >
           Modern CSS Fundamentals
         </a>
-        {isMobileOpen && <div className={backdrop}></div>}
-        <ul className={clsx(navList, isMobileOpen ? panelOpen : panelClose)}>
-          {navLinks.map((entry) => (
-            <li key={entry.link}>
-              <a
-                onClick={handleLinkClick}
-                href={entry.link}
-                className={clsx(
-                  selectedLink === entry.link ? "selected" : "",
-                  navLink,
-                )}
-              >
-                {entry.name}
-              </a>
-            </li>
-          ))}
-        </ul>
+        {/* isMobileOpen && <div className={backdrop}></div> */}
+        {isMobileOpen ? (
+          createPortal(
+            <NavList
+              handleLinkClick={handleLinkClick}
+              selectedLink={selectedLink}
+              className={panelStatus}
+            />,
+            portalTarget.current,
+          )
+        ) : (
+          <NavList
+            handleLinkClick={handleLinkClick}
+            selectedLink={selectedLink}
+            className={panelStatus}
+          />
+        )}
       </nav>
     </>
+  );
+}
+
+function NavList({ handleLinkClick, selectedLink, className }) {
+  return (
+    <ul className={className}>
+      {navLinks.map((entry) => (
+        <li key={entry.link}>
+          <a
+            onClick={handleLinkClick}
+            href={entry.link}
+            className={clsx(
+              selectedLink === entry.link ? "selected" : "",
+              navLink,
+            )}
+          >
+            {entry.name}
+          </a>
+        </li>
+      ))}
+    </ul>
   );
 }

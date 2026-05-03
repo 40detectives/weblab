@@ -127,6 +127,15 @@ a {
 }
 
 .main-content {
+  position: relative;
   overflow-y: auto;
   border: 5px solid rgb(96 70 204);
+}
+
+.content-overlay {
+  position: absolute;
+  max-height: 100dvh;
+  /* overflow-y: hidden; */
+  border: 3px dashed aquamarine;
+  transform: translateZ(0);
 }
