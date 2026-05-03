@@ -118,3 +118,30 @@ a {
     color: var(--c-highlight-text-2);
   }
 }
+
+#root {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  min-height: 100dvh;
+  max-height: 100dvh;
+  border: 5px solid rgb(237 129 129);
+}
+
+.main-content {
+  position: relative;
+  display: grid;
+  min-height: 100%;
+  border: 5px solid rgb(96 70 204);
+}
+
+.scrolled-content {
+  overflow-y: auto;
+  border: 10px solid rgb(204 164 70);
+}
+
+.content-overlay {
+  position: absolute;
+  inset: 0;
+  border: 5px solid rgb(135 222 150);
+  pointer-events: none;
+}
