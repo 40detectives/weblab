@@ -74,6 +74,7 @@ function Navbar({ isSmallScreen, portalTarget }) {
             ["#", "#top", ""].includes(selectedLink) ? "selected" : "",
           )}
           onClick={handleLinkClick}
+          tabIndex={1} // eslint-disable-line jsx-a11y/tabindex-no-positive
         >
           Modern CSS Fundamentals
         </a>
@@ -104,9 +105,10 @@ function Navbar({ isSmallScreen, portalTarget }) {
 function NavList({ handleLinkClick, selectedLink, className }) {
   return (
     <ul className={className}>
-      {navLinks.map((entry) => (
+      {navLinks.map((entry, i) => (
         <li key={entry.link}>
           <a
+            tabIndex={1} // eslint-disable-line jsx-a11y/tabindex-no-positive
             onClick={handleLinkClick}
             href={entry.link}
             className={clsx(

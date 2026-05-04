@@ -8,6 +8,7 @@ export function Hamburger({ ariaControls, onToggle }) {
 
   return (
     <button
+      tabIndex={1} // eslint-disable-line jsx-a11y/tabindex-no-positive
       onClick={handleBurgerClick}
       className={clsx(hamburger, animArrow)}
       type="button"
