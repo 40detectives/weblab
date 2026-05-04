@@ -8,8 +8,8 @@ export default defineConfig({
   plugins: [react(), babel({ presets: [reactCompilerPreset()] })],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "/src"), // __dirname?
-      "@assets": path.resolve(import.meta.dirname, "/src/assets"),
+      "@": path.resolve(import.meta.dirname, "src"), // __dirname?
+      "@assets": path.resolve(import.meta.dirname, "src/assets"),
     },
   },
   css: { modules: { localsConvention: "camelCase" } },
