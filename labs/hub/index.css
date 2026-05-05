@@ -136,6 +136,7 @@ a {
 
 .scrolled-content {
   overflow-y: auto;
+  scroll-behavior: smooth;
   border: 10px solid rgb(204 164 70);
 }
 
