@@ -64,7 +64,7 @@ li > .nav-link {
     min-height: 100%;
     margin-block: 0;
     background-color: var(--ld-bg-alt);
-    /* pointer-events: none; */
+    pointer-events: auto;
     /* background-color: rgb(86 133 213 / 70%); */
     transition-timing-function: ease-out;
     transition-duration: 0.5s;
@@ -81,12 +81,8 @@ li > .nav-link {
       top: 0;
       display: block;
       display: inline-block;
-      opacity: 1
+      opacity: 1;
       /* transform: translate(0, 0); */
-    }
-
-    & > li {
-      pointer-events: auto;
     }
   }
 
@@ -96,13 +92,8 @@ li > .nav-link {
     display: block;
     border: 5px solid chartreuse;
     background-color: rgb(78 67 56 / 55%);
+    pointer-events: auto;
   }
-
-  /*
-  button:global(.selected) ~ .nav-list {
-    opacity: 1;
-    transform: translate(0, 0);
-  } */
 }
 
 @media (width <= 510px) {

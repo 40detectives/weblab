@@ -1,5 +1,5 @@
 import { clsx } from "clsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { useMediaQuery } from "../hooks/useMediaQuery";
 import { Hamburger } from "./hamburger";
@@ -52,9 +52,29 @@ function Navbar({ isSmallScreen, portalTarget }) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [selectedLink, setSelectedLink] = useState("#top");
 
+  useEffect(() => {
+    function handleWindowClick(e) {
+      console.log("yeah Window click!");
+      console.log("target: ", e.target);
+      if (
+        e.target.classList.contains(stickyHeader) ||
+        e.target.classList.contains(navList) ||
+        e.target.closest("#mode-switcher") !== null
+      ) {
+        return;
+      }
+      setIsMobileOpen(false);
+    }
+    window.addEventListener("click", handleWindowClick);
+    return () => window.removeEventListener("click", handleWindowClick);
+  }, []);
+
   const panelStatus = clsx(navList, isMobileOpen ? panelOpen : panelClose);
 
-  const toggleSideBar = () => setIsMobileOpen((prev) => !prev);
+  function handleBurgerClick(event) {
+    event.stopPropagation();
+    setIsMobileOpen((prev) => !prev);
+  }
 
   function handleLinkClick(event) {
     setSelectedLink(event.target.getAttribute("href"));
@@ -64,7 +84,11 @@ function Navbar({ isSmallScreen, portalTarget }) {
     <>
       <nav className={navContainer} id="main-nav">
         {isSmallScreen && (
-          <Hamburger ariaControls={"main-nav"} onToggle={toggleSideBar} />
+          <Hamburger
+            ariaControls={"main-nav"}
+            onClick={handleBurgerClick}
+            className={isMobileOpen ? "selected" : undefined}
+          />
         )}
         <a
           href="#top"
@@ -105,7 +129,7 @@ function Navbar({ isSmallScreen, portalTarget }) {
 function NavList({ handleLinkClick, selectedLink, className }) {
   return (
     <ul className={className}>
-      {navLinks.map((entry, i) => (
+      {navLinks.map((entry) => (
         <li key={entry.link}>
           <a
             tabIndex={1} // eslint-disable-line jsx-a11y/tabindex-no-positive
