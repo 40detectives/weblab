@@ -30,12 +30,12 @@
 }
 
 .radio-switch label:first-of-type {
-  padding-right: 5em;
+  padding-right: 4.8em;
 }
 
 .radio-switch label:last-of-type {
-  margin-left: -4.25em;
-  padding-left: 5em;
+  margin-left: -4.6em;
+  padding-left: 4.5em;
 }
 
 /* making the switch UI.  */
@@ -59,13 +59,13 @@
   border-radius: 100%;
   background: var(--c-silvery-white);
   transition: transform 0.2s ease-in-out;
-  transform: translateX(0.15em);
+  transform: translateX(-0.25em);
 }
 
 .radio-switch label:first-of-type::after {
   width: 4em;
   height: 1.6em;
-  margin: 0 1em;
+  margin: 0 0 0 0.4em;
   border-color: var(--c-silvery-white);
   border-radius: 1em;
   background: var(--c-dark-tangerine);
@@ -84,7 +84,7 @@
 }
 
 .radio-switch input:first-of-type:checked ~ label:first-of-type::before {
-  transform: translateX(-2.15em);
+  transform: translateX(-2.55em);
 }
 
 .radio-switch input:last-of-type:checked ~ label:last-of-type {
