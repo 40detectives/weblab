@@ -9,7 +9,7 @@ export function Home() {
       <NavHeader portalTarget={contentRef} />
       <div className="main-content">
         <div className="scrolled-content">
-          <h1 id="top">Modern CSS Fundamentals v1</h1>
+          <h1 id="top">Weblab Hub</h1>
           <h2>My Implementation</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
@@ -21,7 +21,7 @@ export function Home() {
             consequatur alias dolore nam deserunt vero dicta provident
             perferendis odio.
           </p>
-          <h2 id="project">Project</h2>
+          <h2 id="current-work">Currently Building</h2>
           <p>
             Corporis illum velit distinctio maxime ducimus cum, mollitia
             corrupti itaque iste odit. Necessitatibus voluptatem molestiae
@@ -38,7 +38,6 @@ export function Home() {
             natus quidem aut, soluta officiis dolor optio ab recusandae
             similique distinctio qui asperiores ipsam doloribus!
           </p>
-          <h2 id="exercises">Exercises</h2>
           <p>
             Aperiam pariatur nesciunt quis quod officiis unde quam dicta quas
             numquam eius, corrupti est, nostrum natus. Molestiae, earum tempora!
@@ -48,6 +47,7 @@ export function Home() {
             dolores blanditiis suscipit dolore. Maiores non illum expedita
             adipisci labore, laboriosam laudantium a perferendis voluptatibus!
           </p>
+          <h2 id="tech-stack">Featured Technologies</h2>
           <p>
             Dolores expedita vel voluptatem, aliquid enim numquam tempore quam
             dolorem ea porro praesentium, recusandae laborum eveniet nam sit!
@@ -69,6 +69,7 @@ export function Home() {
             ipsam maiores soluta minus vitae, commodi ex eos doloribus?
             Praesentium, voluptas tempora.
           </p>
+          <h2 id="learning-paths">Learning Paths</h2>
           <p>
             Repudiandae ducimus quo cum minus soluta odit corporis id aperiam
             officia atque possimus eligendi in enim delectus ipsa assumenda,
@@ -82,7 +83,6 @@ export function Home() {
             quaerat expedita, reiciendis aliquid soluta distinctio excepturi
             maiores, odit eligendi illo hic temporibus quo. Harum, facilis.
           </p>
-          <h2 id="source">Source</h2>
           <p>
             Deleniti id aliquid optio temporibus debitis reprehenderit eos
             accusamus accusantium quam, eveniet assumenda nemo quis libero aut
@@ -111,6 +111,7 @@ export function Home() {
             voluptatem aliquam rem provident molestiae, at adipisci iusto
             magnam, non consequuntur consectetur autem eligendi.
           </p>
+          <h2 id="changelog">Change Log</h2>
           <p>
             Eius sint placeat inventore fugiat perferendis repellat minima
             repudiandae adipisci quibusdam earum odio sequi enim itaque quam
@@ -128,16 +129,8 @@ export function Home() {
             magni amet inventore. Laborum repellendus atque autem quis cum, nemo
             itaque exercitationem officia, quo, numquam id!
           </p>
-          <h2 id="course-site">Course Site</h2>
-          <p>
-            Pariatur sed eius impedit esse debitis minus, animi nostrum alias
-            libero ipsam quam accusamus vero possimus ad temporibus commodi
-            fugiat eveniet illo molestias dolor voluptates? Nemo, neque,
-            consequuntur sequi maiores eos vitae molestias deserunt aliquam
-            praesentium voluptatibus id soluta earum enim labore, itaque
-            incidunt dolores quasi reiciendis pariatur. Voluptas, vero maxime
-            dolores unde ullam et optio rerum soluta. Fugiat, earum!
-          </p>
+          {/* <h2 id="portfolio">Portfolio</h2>
+          <p>Comming soon! ⏳</p> */}
         </div>
         <div className="content-overlay" ref={contentRef}></div>
       </div>

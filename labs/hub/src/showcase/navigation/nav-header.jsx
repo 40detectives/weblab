@@ -19,11 +19,12 @@ import {
 import { ThemeSwitcher } from "./theme-switcher";
 
 const navLinks = [
-  // { name: "Modern CSS Fundamentals", link: "#top", classes: homeLink },
-  { name: "Project", link: "#project" },
-  { name: "Exercises", link: "#exercises" },
-  { name: "Source Code", link: "#source" },
-  { name: "Course Site", link: "#course-site" },
+  // { name: "Weblab Hub", link: "#top", classes: homeLink },
+  { name: "Current Work", link: "#current-work" },
+  { name: "Tech Stack", link: "#tech-stack" },
+  { name: "Learning Paths", link: "#learning-paths" },
+  { name: "Change Log", link: "#changelog" },
+  // { name: "Portfolio", link: "#portfolio" },
 ];
 
 export function NavHeader({ portalTarget }) {
@@ -102,7 +103,7 @@ function Navbar({ isSmallScreen, portalTarget }) {
           onClick={handleLinkClick}
           tabIndex={1} // eslint-disable-line jsx-a11y/tabindex-no-positive
         >
-          Modern CSS Fundamentals
+          Weblab Hub
         </a>
         {isMobileOpen ? (
           createPortal(
