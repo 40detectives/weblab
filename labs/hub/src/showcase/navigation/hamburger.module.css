@@ -81,7 +81,7 @@
   transform: translate3d(calc(var(--hamburger-width) * 0.2)) rotate(-45deg) scale(0.7, 1);
 }
 
-@media (width > 770px) {
+@media (width > 694px) {
   .hamburger {
     display: none;
   }

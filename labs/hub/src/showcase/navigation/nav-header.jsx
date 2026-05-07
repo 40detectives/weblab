@@ -5,10 +5,11 @@ import { useMediaQuery } from "../hooks/useMediaQuery";
 import { Hamburger } from "./hamburger";
 import {
   backdrop,
-  homeLink,
   navContainer,
   navFlex,
+  navFlexChild,
   navLink,
+  navLinkHome,
   navList,
   navSearch,
   panelClose,
@@ -26,7 +27,7 @@ const navLinks = [
 ];
 
 export function NavHeader({ portalTarget }) {
-  const mediaQuery = "(width <= 770px)";
+  const mediaQuery = "(width <= 694px)";
   const isSmallScreen = useMediaQuery(mediaQuery);
 
   return (
@@ -37,13 +38,13 @@ export function NavHeader({ portalTarget }) {
         portalTarget={portalTarget}
       />
       <input
-        size={18}
+        // size={18}
         type="search"
         name="lesson-search"
         id="lesson-search-input"
-        className={navSearch}
+        className={clsx(navSearch, navFlexChild)}
       />
-      <ThemeSwitcher />
+      <ThemeSwitcher className={navFlexChild} />
     </header>
   );
 }
@@ -53,13 +54,13 @@ function Navbar({ isSmallScreen, portalTarget }) {
   const [selectedLink, setSelectedLink] = useState("#top");
 
   useEffect(() => {
-    function handleWindowClick(e) {
+    function handleWindowClick(event) {
       console.log("yeah Window click!");
-      console.log("target: ", e.target);
+      console.log("target: ", event.target);
       if (
-        e.target.classList.contains(stickyHeader) ||
-        e.target.classList.contains(navList) ||
-        e.target.closest("#mode-switcher") !== null
+        event.target.classList.contains(stickyHeader) ||
+        event.target.classList.contains(navList) ||
+        event.target.closest("#mode-switcher") !== null
       ) {
         return;
       }
@@ -93,7 +94,8 @@ function Navbar({ isSmallScreen, portalTarget }) {
         <a
           href="#top"
           className={clsx(
-            homeLink,
+            navFlexChild,
+            navLinkHome,
             navLink,
             ["#", "#top", ""].includes(selectedLink) ? "selected" : "",
           )}
@@ -130,7 +132,7 @@ function NavList({ handleLinkClick, selectedLink, className }) {
   return (
     <ul className={className}>
       {navLinks.map((entry) => (
-        <li key={entry.link}>
+        <li key={entry.link} className={navFlexChild}>
           <a
             tabIndex={1} // eslint-disable-line jsx-a11y/tabindex-no-positive
             onClick={handleLinkClick}
