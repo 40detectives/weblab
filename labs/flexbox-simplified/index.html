@@ -7,10 +7,384 @@
       type="image/svg+xml"
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💪🏻</text></svg>"
     >
+    <link rel="stylesheet" href="src/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox Simplified</title>
   </head>
   <body>
-    <div id="app"></div>
+    <main>
+      <header>
+        <h1>
+          <i>Index of&nbsp;</i> <a href="/">flexbox-simplified/</a>
+          <a href="/lessons/">lessons/</a>
+        </h1>
+      </header>
+      <ul id="files">
+        <li><a href="/" title="/" class="directory ">..</a> </li>
+        <li>
+          <a href="/lessons/02-01-flex-container/" title="02-01-flex-container/" class="folder "
+            >02-01-flex-container/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/02-02-flex-items/" title="02-02-flex-items/" class="folder "
+            >02-02-flex-items/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/02-03-flex-items/" title="02-03-flex-items/" class="folder "
+            >02-03-flex-items/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/02-04-flex-items/" title="02-04-flex-items/" class="folder "
+            >02-04-flex-items/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/02-05-flex-items/" title="02-05-flex-items/" class="folder "
+            >02-05-flex-items/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/02-06-flex-items-challenge/"
+            title="02-06-flex-items-challenge/"
+            class="folder "
+            >02-06-flex-items-challenge/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/02-06-flex-items-challenge-solution/"
+            title="02-06-flex-items-challenge-solution/"
+            class="folder "
+            >02-06-flex-items-challenge-solution/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/03-01-flex-direction/" title="03-01-flex-direction/" class="folder "
+            >03-01-flex-direction/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/03-02-flex-and-collapsing-margins/"
+            title="03-02-flex-and-collapsing-margins/"
+            class="folder "
+            >03-02-flex-and-collapsing-margins/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/03-03-flex-direction-reverse/"
+            title="03-03-flex-direction-reverse/"
+            class="folder "
+            >03-03-flex-direction-reverse/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/03-04-order/" title="03-04-order/" class="folder ">03-04-order/</a>
+        </li>
+        <li>
+          <a href="/lessons/03-05-flex-grow/" title="03-05-flex-grow/" class="folder "
+            >03-05-flex-grow/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/03-06-flex-shrink/" title="03-06-flex-shrink/" class="folder "
+            >03-06-flex-shrink/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/03-07-grow-shrink-min-max-challenge/"
+            title="03-07-grow-shrink-min-max-challenge/"
+            class="folder "
+            >03-07-grow-shrink-min-max-challenge/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/03-08-grow-shrink-min-max-followup/"
+            title="03-08-grow-shrink-min-max-followup/"
+            class="folder "
+            >03-08-grow-shrink-min-max-followup/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/03-09-layout-challenge-01/"
+            title="03-09-layout-challenge-01/"
+            class="folder "
+            >03-09-layout-challenge-01/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/03-10-layout-challenge-01-finished/"
+            title="03-10-layout-challenge-01-finished/"
+            class="folder "
+            >03-10-layout-challenge-01-finished/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/04-01-flex-basis/" title="04-01-flex-basis/" class="folder "
+            >04-01-flex-basis/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/04-02-flex-basis-challenge-01/"
+            title="04-02-flex-basis-challenge-01/"
+            class="folder "
+            >04-02-flex-basis-challenge-01/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/04-03-flex-basis-challenge-01-finished/"
+            title="04-03-flex-basis-challenge-01-finished/"
+            class="folder "
+            >04-03-flex-basis-challenge-01-finished/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/05-01-justification-01/"
+            title="05-01-justification-01/"
+            class="folder "
+            >05-01-justification-01/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/05-02-justification-02/"
+            title="05-02-justification-02/"
+            class="folder "
+            >05-02-justification-02/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/05-03-alignment/" title="05-03-alignment/" class="folder "
+            >05-03-alignment/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/05-04-alignment-baseline/"
+            title="05-04-alignment-baseline/"
+            class="folder "
+            >05-04-alignment-baseline/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/05-05-buttons-with-icons-start/"
+            title="05-05-buttons-with-icons-start/"
+            class="folder "
+            >05-05-buttons-with-icons-start/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/05-05-buttons-with-icons/"
+            title="05-05-buttons-with-icons/"
+            class="folder "
+            >05-05-buttons-with-icons/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/05-06-simple-navigation-challenge-start/"
+            title="05-06-simple-navigation-challenge-start/"
+            class="folder "
+            >05-06-simple-navigation-challenge-start/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/05-07-simple-navigation-solution/"
+            title="05-07-simple-navigation-solution/"
+            class="folder "
+            >05-07-simple-navigation-solution/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/05-08-simple-navigation-challenge-02-finished/"
+            title="05-08-simple-navigation-challenge-02-finished/"
+            class="folder "
+            >05-08-simple-navigation-challenge-02-finished/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/05-09-align-self/" title="05-09-align-self/" class="folder "
+            >05-09-align-self/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/05-10-align-self-example/"
+            title="05-10-align-self-example/"
+            class="folder "
+            >05-10-align-self-example/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/05-11-align-self-example-finished/"
+            title="05-11-align-self-example-finished/"
+            class="folder "
+            >05-11-align-self-example-finished/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/06-01-flex-wrap/" title="06-01-flex-wrap/" class="folder "
+            >06-01-flex-wrap/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/06-02-wrapping-navigation-challenge/"
+            title="06-02-wrapping-navigation-challenge/"
+            class="folder "
+            >06-02-wrapping-navigation-challenge/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/06-03-wrapping-navigation-finished/"
+            title="06-03-wrapping-navigation-finished/"
+            class="folder "
+            >06-03-wrapping-navigation-finished/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/06-04-flex-wrap-grow-shrink/"
+            title="06-04-flex-wrap-grow-shrink/"
+            class="folder "
+            >06-04-flex-wrap-grow-shrink/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/06-05-flex-wrap-grow-shrink-and-grow/"
+            title="06-05-flex-wrap-grow-shrink-and-grow/"
+            class="folder "
+            >06-05-flex-wrap-grow-shrink-and-grow/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/06-06-flex-wrap-layout-challenge-start/"
+            title="06-06-flex-wrap-layout-challenge-start/"
+            class="folder "
+            >06-06-flex-wrap-layout-challenge-start/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/06-07-flex-wrap-layout-challenge-finished/"
+            title="06-07-flex-wrap-layout-challenge-finished/"
+            class="folder "
+            >06-07-flex-wrap-layout-challenge-finished/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/06-08-flex-flow/" title="06-08-flex-flow/" class="folder "
+            >06-08-flex-flow/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/06-09-align-content/" title="06-09-align-content/" class="folder "
+            >06-09-align-content/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/06-10-place-content/" title="06-10-place-content/" class="folder "
+            >06-10-place-content/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/07-01-magic-margins-intro/"
+            title="07-01-magic-margins-intro/"
+            class="folder "
+            >07-01-magic-margins-intro/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/07-02-fixing-floating-footer/"
+            title="07-02-fixing-floating-footer/"
+            class="folder "
+            >07-02-fixing-floating-footer/</a
+          >
+        </li>
+        <li><a href="/lessons/08-01-gap/" title="08-01-gap/" class="folder ">08-01-gap/</a> </li>
+        <li>
+          <a
+            href="/lessons/08-02-gap-fallback-solution/"
+            title="08-02-gap-fallback-solution/"
+            class="folder "
+            >08-02-gap-fallback-solution/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/09-01-revisiting-flex-grow/"
+            title="09-01-revisiting-flex-grow/"
+            class="folder "
+            >09-01-revisiting-flex-grow/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/09-02-main-sidebar/" title="09-02-main-sidebar/" class="folder "
+            >09-02-main-sidebar/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/10-01-even-columns-everytime/"
+            title="10-01-even-columns-everytime/"
+            class="folder "
+            >10-01-even-columns-everytime/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/10-02-main-sidebar/" title="10-02-main-sidebar/" class="folder "
+            >10-02-main-sidebar/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/10-03-more-adaptable-sidebar/"
+            title="10-03-more-adaptable-sidebar/"
+            class="folder "
+            >10-03-more-adaptable-sidebar/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/10-04-grid-ish/" title="10-04-grid-ish/" class="folder "
+            >10-04-grid-ish/</a
+          >
+        </li>
+        <li>
+          <a
+            href="/lessons/10-05-combining-different-patterns/"
+            title="10-05-combining-different-patterns/"
+            class="folder "
+            >10-05-combining-different-patterns/</a
+          >
+        </li>
+        <li>
+          <a href="/lessons/10-06-holy-albatross/" title="10-06-holy-albatross/" class="folder "
+            >10-06-holy-albatross/</a
+          >
+        </li>
+      </ul>
+    </main>
   </body>
 </html>
