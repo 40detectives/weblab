@@ -1,0 +1,31 @@
+/*  /////////////////
+    Your task 
+    /////////////////
+
+    1. Get the 3 `.column` classes next
+      to one another.
+
+    2. All 3 must be equal in width
+
+
+    /// Note
+    It'll be a lot easier if you add
+    a class to the parent <div> in
+    the HTML :)
+
+    ///////////////// */
+
+.flexbox {
+  display:flex;
+  margin: 3vh 4vw;
+  /* width: 90%; */ /* -> another way to stop touching the edges */
+  gap: 2vw;
+}
+
+.column {
+  width: 100%;
+  padding: 2rem;
+  border: 2px solid black;
+}
+
+
