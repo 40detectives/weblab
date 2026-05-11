@@ -26,7 +26,7 @@ header {
 }
 
 h1 {
-  margin-top: 0;
+  margin-block: 0 1.5rem;
   color: #000;
   font-weight: 500;
   font-size: 18px;
@@ -38,7 +38,6 @@ ul a {
   display: block;
   overflow: hidden;
   width: 100%;
-  margin: 0 -5px;
   padding: 10px 5px;
   color: #000;
   text-overflow: ellipsis;
@@ -89,8 +88,8 @@ ul a.file.gif::before,ul a.file.jpg::before,ul a.file.png::before,ul a.file.svg:
 h1 i { font-style: normal; }
 
 ul {
-  margin: 0 0 0 -2px;
-  padding: 20px 0 0;
+  margin: 0;
+  padding: 0;
 }
 
 ul li {
@@ -117,9 +116,8 @@ svg {
   }
 
   ul li {
-    /* width: 230px; */
-    /* padding-right: 20px; */
-    flex: 1 1 50%;
+    flex: 0 1 50%;
+    max-width: 50%;
   }
 }
 
@@ -128,9 +126,10 @@ svg {
   h1, header h1 a { font-size: 15px; }
 
   ul li {
-    flex: 1 1 33.3333%;
+    flex: 0 1 33.3333%;
     justify-content: flex-start;
     box-sizing: border-box;
+    max-width: 33.3333%;
     font-size: 13px;
   }
 }
