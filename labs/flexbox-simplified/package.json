@@ -11,7 +11,7 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "vite": "^8.0.10",
-    "@weblab/shared": "^0.1.0"
+    "@weblab/shared": "^0.1.0",
+    "vite": "^8.0.10"
   }
 }
