@@ -14,3 +14,79 @@
       continues to grow to take up the 
       rest of the available space
 */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (width <32.5em) {
+  .flex-container, .card-text { background-color: hsl(155, 97%, 24%);}
+  .subscribe { display: contents; }
+  .card {
+    display: contents;
+    & > * {
+      padding-inline: 2rem;
+    }
+    & > :first-child {
+      padding-block-start: 2rem;
+    }
+    & > * + * {
+      padding-block-start: 0.25rem;
+    }
+    & > :last-child {
+      padding-block-end: 2rem;
+    }
+  }
+  
+  .card-text {
+    --flow-spacing: 0.7em;
+    position: sticky;
+    top: 0;
+    font-size: 0.95rem;
+    & > h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media (width >= 32.5em) {
+  .flex-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .flex-container > * {
+    width: 50%;
+  }
+
+  .subscribe {
+    max-width: 25rem;
+    /* background-color: hsl(155deg 48.58% 59.3%); */
+    padding-bottom: 2rem;
+  }
+
+  .card {
+    position: sticky;
+    top: 0;
+  }
+
+  .recent-episodes {
+    flex-grow: 1;
+  }
+}
+
+@media (width >= 32.5em) and (height <= 610px) {
+  /* and (aspect-ratio >= 16/10) */
+  .card {
+    position: initial;
+    top: unset;
+    min-height: 100%;
+  }
+  .card-text {
+    position: sticky;
+    top: 0;
+  }
+  .card-cover-image {
+    width: 75%;
+    margin: auto;
+  }
+}

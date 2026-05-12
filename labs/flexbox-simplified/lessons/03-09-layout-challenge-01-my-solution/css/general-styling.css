@@ -23,7 +23,7 @@ body {
   font-family: "Work Sans", sans-serif;
   font-weight: 400;
   font-size: 1.25rem;
-  color: #222;
+  color: #2c2c2c;
 
   padding-bottom: 6rem;
 }
@@ -84,8 +84,13 @@ select {
 }
 
 .text-light {
-  color: #666;
-  font-weight: 350;
+  color: #777;
+  font-weight: 400;
+}
+
+.episode-meta {
+  font-weight: 500;
+  color: #484848;
 }
 
 .bg-primary {
@@ -95,9 +100,9 @@ select {
 .btn {
   cursor: pointer;
   padding: 0.5em 1em;
-  color: #222;
+  color: #2c2c2c;
   background-color: #fff;
-  border: 1px solid #222;
+  border: 1px solid #2c2c2c;
   border-radius: 0.25em;
   font-weight: 700;
 }
@@ -106,16 +111,18 @@ select {
 .btn:focus {
   background-color: hsl(155, 97%, 24%);
   color: #fff;
+  border: 1px solid #fff;
 }
 
 .bg-primary .btn {
-  border: 0;
+  border: 1px solid transparent;
 }
 
 .bg-primary .btn:hover,
 .bg-primary .btn:focus {
   background-color: rgba(0, 0, 0, 0.6);
   color: #fff;
+  border: 1px solid #fff;
 }
 
 .card {
