@@ -8,7 +8,7 @@ export default defineConfig({
       "@images": path.resolve(import.meta.dirname, "/images"),
     },
   },
-  base: "/weblab/labs/simple-blog/dist/",
+  // base: "/weblab/labs/simple-blog/dist/",
   build: {
     outDir: "dist",
     cssMinify: "lightningcss", //"esbuild",
