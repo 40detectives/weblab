@@ -55,7 +55,8 @@
     flex-wrap: nowrap;
   }
   .flex-container > * {
-    width: 50%;
+    /* width: 50%; */
+    width: 100%;
   }
 
   .subscribe {
