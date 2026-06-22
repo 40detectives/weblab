@@ -37,6 +37,6 @@
   background-color: hsl(19, 93%, 27%);
   background-blend-mode: overlay;
   background-size: cover;
-  background-position: cover;
+  background-position: center;
   color: #fff;
 }

@@ -45,7 +45,7 @@
   background-color: hsl(19, 93%, 27%);
   background-blend-mode: overlay;
   background-size: cover;
-  background-position: cover;
+  background-position: center;
   color: #fff;
   flex-basis: 18rem;
   flex-grow: 0;
